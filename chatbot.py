@@ -1,7 +1,7 @@
 import streamlit as st
 import ollama
 
-st.title("💬 NYAAI LAWBOT")
+st.title("💬 Chatbot")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
