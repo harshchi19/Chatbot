@@ -15,7 +15,7 @@ for msg in st.session_state.messages:
 
 ## Generator for Streaming Tokens
 def generate_response():
-    response = ollama.chat(model='llama2', stream=True, messages=st.session_state.messages)
+    response = ollama.chat(model='gemma:2b', stream=True, messages=st.session_state.messages)
     for partial_resp in response:
         token = partial_resp["message"]["content"]
         st.session_state["full_message"] += token
